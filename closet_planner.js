@@ -31,6 +31,7 @@ $(document).ready(function() {
   $('#frame').droppable({
     drop: function(ev, ui) {
 
+      // for elements with 2-digit id
       if (ui.helper.attr('id').search(/drag[0-9][0-9]/) !== -1) {
         counter += 1;
         var element = $(ui.draggable).clone();
@@ -45,8 +46,12 @@ $(document).ready(function() {
         console.log(itemDragged);
 
         $('#clonediv' + counter).addClass(itemDragged);
+        $('#clonediv' + counter).dblclick(function() {
+          this.remove();
+        });
       }
 
+      // for elements with 1-digit id
       else if (ui.helper.attr('id').search(/drag[0-9]/) !== -1) {
         counter += 1;
         var element = $(ui.draggable).clone();
@@ -61,8 +66,12 @@ $(document).ready(function() {
         console.log(itemDragged);
 
         $('#clonediv' + counter).addClass(itemDragged);
+        $('#clonediv' + counter).dblclick(function() {
+          this.remove();
+        });
       }
-      
+
     }
   });
+  
 });
