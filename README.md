@@ -1,2 +1,2 @@
-closet_planner
+Closet Planner
 ==============
