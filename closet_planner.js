@@ -30,7 +30,8 @@ $(document).ready(function() {
   // make element droppable
   $('#frame').droppable({
     drop: function(ev, ui) {
-      if (ui.helper.attr('id').search(/drag[0-9]/) !== -1) {
+
+      if (ui.helper.attr('id').search(/drag[0-9][0-9]/) !== -1) {
         counter += 1;
         var element = $(ui.draggable).clone();
         element.addClass('tempclass');
@@ -38,13 +39,30 @@ $(document).ready(function() {
         $('.tempclass').attr('id','clonediv' + counter);
         $('#clonediv' + counter).removeClass('tempclass');
 
-        // Get the dynamically item id
+        // get the dynamic item id
+        var draggedNumber = ui.helper.attr('id').search(/drag([0-9][0-9])/);
+        var itemDragged = 'dragged' + RegExp.$1;
+        console.log(itemDragged);
+
+        $('#clonediv' + counter).addClass(itemDragged);
+      }
+
+      else if (ui.helper.attr('id').search(/drag[0-9]/) !== -1) {
+        counter += 1;
+        var element = $(ui.draggable).clone();
+        element.addClass('tempclass');
+        $(this).append(element);
+        $('.tempclass').attr('id','clonediv' + counter);
+        $('#clonediv' + counter).removeClass('tempclass');
+
+        // get the dynamic item id
         var draggedNumber = ui.helper.attr('id').search(/drag([0-9])/);
         var itemDragged = 'dragged' + RegExp.$1;
         console.log(itemDragged);
 
         $('#clonediv' + counter).addClass(itemDragged);
       }
+      
     }
   });
 });

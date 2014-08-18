@@ -9,12 +9,11 @@
   height: 200px;
   border: 1px solid red;
   margin: 40px auto;
+  overflow: scroll;
 }
 
 .drag {
   display: inline-block;
-/*  margin-left: 15px;
-  margin-top: 15px;*/
   width: 200px;
   height: 200px;
 }
@@ -35,13 +34,37 @@
   background-image: url("images/image-4.png");
 }
 
-/*#drag5 {
+#drag5 {
   background-image: url("images/image-5.png");
 }
 
 #drag6 {
   background-image: url("images/image-6.png");
-}*/
+}
+
+#drag7 {
+  background-image: url("images/image-7.png");
+}
+
+#drag8 {
+  background-image: url("images/image-8.png");
+}
+
+#drag9 {
+  background-image: url("images/image-9.png");
+}
+
+#drag10 {
+  background-image: url("images/image-10.png");
+}
+
+#drag11 {
+  background-image: url("images/image-11.png");
+}
+
+#drag12 {
+  background-image: url("images/image-12.png");
+}
 
 #frame {
   width: 815px;
@@ -68,7 +91,8 @@
 
 /* classes for dragged stuff */
 
-.dragged1, .dragged2, .dragged3, .dragged4, .dragged5, .dragged6 {
+.dragged1, .dragged2, .dragged3, .dragged4, .dragged5, .dragged6,
+.dragged7, .dragged8, .dragged9, .dragged10, .dragged11, .dragged12 {
   position: absolute;
   width: 200px;
   height: 200px;
@@ -90,13 +114,37 @@
   background-image: url("images/image-4.png");
 }
 
-/*.dragged5 {
+.dragged5 {
   background-image: url("images/image-5.png");
 }
 
 .dragged6 {
   background-image: url("images/image-6.png");
-}*/
+}
+
+.dragged7 {
+  background-image: url("images/image-7.png");
+}
+
+.dragged8 {
+  background-image: url("images/image-8.png");
+}
+
+.dragged9 {
+  background-image: url("images/image-9.png");
+}
+
+.dragged10 {
+  background-image: url("images/image-10.png");
+}
+
+.dragged11 {
+  background-image: url("images/image-11.png");
+}
+
+.dragged12 {
+  background-image: url("images/image-12.png");
+}
 
 /*#element {
   border: 1px solid red
