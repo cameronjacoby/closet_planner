@@ -9,14 +9,18 @@
   <!-- custom style -->
   <link rel="stylesheet" href="closet_planner.css">
 
-  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <!-- jquery & jquery ui -->
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
     google.load("jquery", "1.4.2");
     google.load("jqueryui", "1.7.2");
   </script>
+
+  <!-- html2canvas script -->
+  <script type="text/javascript" src="html2canvas.js"></script>
   
   <!-- custom script -->
-  <script src="closet_planner.js"></script>
+  <script type="text/javascript" src="closet_planner.js"></script>
 </head>
 
 <body>
@@ -42,8 +46,15 @@
       <td>
         <div id="frame"></div>
       </td>
-    </tr>
   </table>
+
+  <!-- <button id="save">Save</button> -->
+  <div id="buttons">
+    <div id="clear">Clear</div>
+    <div id="about">About</div>
+  </div>
+
+  <div id="about-window"><div></div></div>
 
 </body>
 </html>

@@ -73,5 +73,22 @@ $(document).ready(function() {
 
     }
   });
+
+  // $('#save').click(function() {
+  //     html2canvas($('#frame'), {
+  //     onrendered: function(canvas) {
+  //       window.open('', canvas.toDataURL());
+  //     },
+  //     allowTaint: true
+  //   });
+  // });
+
+  $('#clear').click(function() {
+    $('#frame').empty();
+  });
+
+  $('#about').click(function() {
+    $('#about-window').slideToggle();
+  });
   
 });
