@@ -55,7 +55,7 @@ table {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 500px;
+  height: 350px;
 }
 
 #about-window div {
@@ -73,7 +73,7 @@ table {
   height: 150px;
 }
 
-.drag:hover, {
+.drag:hover {
   opacity: 1;
   cursor: pointer;
 }
